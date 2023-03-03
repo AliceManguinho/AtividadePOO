@@ -9,7 +9,10 @@ public class RespostaListaExercicio {
 	 * Não se faz necessário implementar dentro do escopo do método.
 	 */
 	public static void main(String[] args) {
+		float peso = 80;
+		float altura = 1.5f;
 		
+		System.out.println(calcularImc(peso, altura));
 	}
 	
 	/**
@@ -21,7 +24,8 @@ public class RespostaListaExercicio {
 	 */
 	public static float calcularImc(float peso, float altura) 
 	{
-		return 0f;
+
+		return (float) peso / (altura * altura);
 	}
 	
 	/**
@@ -34,7 +38,10 @@ public class RespostaListaExercicio {
 	 */
 	public static float calcularAreaTrapezio(float baseMaior, float baseMenor, float altura) 
 	{	
-		return 0f;
+		
+		float area = ((baseMaior + baseMenor) * altura) / 2;
+				
+		return area;
 	}
 	
 	/**
@@ -47,8 +54,13 @@ public class RespostaListaExercicio {
 	 */
 	public static int maiorEntreDoisInteiros(int a, int b) 
 	{
-		return 0;
+		if(a > b) {
+			return a;
+	}else {
+		return b;
+	 }
 	}
+
 	
 	/**
 	 * Método verifica se o número apresentado como argumento é ímpar ou par.
@@ -59,7 +71,11 @@ public class RespostaListaExercicio {
 	 */
 	public static boolean verificarParImpar(int numero) 
 	{
-		return false;		
+		if(numero % 2 == 0) {
+			return true;
+		}else{
+		return false;	
+		}
 	}
 	
 	/**
@@ -69,7 +85,14 @@ public class RespostaListaExercicio {
 	 * @return media
 	 */
 	public static float calcularMediaNotas(float[] notas) {
-		return 0f;
+		
+		float r = 0f;
+		for (int i = 0; i < notas.length; i++) {
+			r = r + notas[i];
+			
+		}float media = r / notas.length;
+				
+		return media;
 	}
 	
 	/**
@@ -80,9 +103,11 @@ public class RespostaListaExercicio {
 	 */
 	public static void imprimirArrayInverso(int[] array)
 	{
+		
+		for (int i = 0; i > array.length; i++);
+		
 		System.out.print("");
 	}
-	
 	/**
 	 * Método deve imprimir os elementos primos de um array de inteiros. O formato da impressão 
 	 * deve ser feito numa única linha, utilizando espaço em branco (" ") entre os elementos e 
